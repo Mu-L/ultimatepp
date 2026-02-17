@@ -24,8 +24,8 @@ topic "Design Notes";
 [2 $$0,0#00000000000000000000000000000000:Default]
 [{_} 
 [s2; Design Notes&]
+[s3; Table of Contents&]
 [s0; &]
-[s0; [*4 Table of Contents]&]
 [s0; [^topic`:`/`/Core`/SSH`/srcdoc`/Design`_en`-us`#1^ 1. Overview]&]
 [s0; [^topic`:`/`/Core`/SSH`/srcdoc`/Design`_en`-us`#2^ 2. Architectural 
 Model]&]
