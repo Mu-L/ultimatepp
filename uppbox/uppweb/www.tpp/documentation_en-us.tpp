@@ -128,6 +128,7 @@ UHD displays and Dark theme]&]
 [s0;l320; [^topic`:`/`/Core`/SSH`/srcdoc`/Tutorial`_en`-us^ Core SSH 
 Tutorial] `- a core supplementary tutorial that walks through 
 building applications leveraging the SSH protocol.&]
+[s0;l160; &]
 [s0;l160; [^topic`:`/`/CtrlLib`/srcdoc`/Tutorial`$en`-us^ GUI Tutorial] 
 `- learn how to build graphical user interfaces with the U`+`+.&]
 [s0;l160; [^topic`:`/`/Draw`/srcdoc`/DrawTutorial`$en`-us^ Draw Tutorial] 

@@ -904,9 +904,7 @@ SFTP, SCP, tunneling&]
 features as your application needs grow.&]
 [s0;b20;t300;G &]
 [s3;:10: 10. Additional Resources&]
-[s5;l192;i150;O0; U`+`+ Documentation: [^https`:`/`/www`.ultimatepp`.org`/^ https://www.u
-ltimatepp.org/]&]
-[s5;l192;i150;O0; U`+`+ Forums: Community support and examples&]
+[s5; You may also find these resources helpful:&]
 [s5;l192;i150;O0; libssh2 Reference: [^https`:`/`/www`.libssh2`.org`/^ https://www.libssh
 2.org/]&]
 [s0; &]
