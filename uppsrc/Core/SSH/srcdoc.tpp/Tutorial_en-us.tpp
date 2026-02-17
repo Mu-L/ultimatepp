@@ -1,4 +1,4 @@
-topic "Tutorial";
+topic "U++ Core/SSH Tutorial";
 [l288;i1120;a17;O9;~~~.1408;2 $$1,0#10431211400427159095818037425705:param]
 [a83;*R6 $$2,5#31310162474203024125188417583966:caption]
 [H4;b83;*4 $$3,5#07864147445237544204411237157677:title]
@@ -23,11 +23,11 @@ topic "Tutorial";
 [b83;* $$22,22#78EB85B566C7E078B53494D0FD53D992:subtitle]
 [2 $$0,0#00000000000000000000000000000000:Default]
 [{_} 
-[s0;b20;a20;pht300; [*G5 U`+`+/SSH Package Tutorial]&]
+[s2; U`+`+ Core/SSH Tutorial&]
 [s5; A practical guide to using the SSH package in U`+`+ applications. 
 &]
-[s0;b20;t300;G &]
-[s0; [*4 Table of Contents]&]
+[s3; Table of Contents&]
+[s0; &]
 [s0; [^`#1^ 1 Introduction]&]
 [s0; [^`#2^ 2 Getting Started]&]
 [s0; [^`#3^ 3 Command Execution]&]
