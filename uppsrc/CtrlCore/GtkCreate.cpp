@@ -70,8 +70,11 @@ void Ctrl::Create(Ctrl *owner, bool popup)
 	w.gdk = nullptr;
 	
 	TopWindow *tw = dynamic_cast<TopWindow *>(this);
-	if(popup)
+	if(popup) {
 		gtk_window_set_decorated(gtk(), FALSE);
+		if(IsWayland() && !owner) // otherwise Wayland adds titlebar to splashscreens....
+			gtk_window_set_titlebar(gtk(), gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0));
+	}
 	gtk_window_set_type_hint(gtk(),
 	            popup ? /*owner ? GDK_WINDOW_TYPE_HINT_COMBO : */GDK_WINDOW_TYPE_HINT_POPUP_MENU
 	                  : tw && tw->tool ? GDK_WINDOW_TYPE_HINT_UTILITY
@@ -144,7 +147,7 @@ void Ctrl::Create(Ctrl *owner, bool popup)
 		if(findarg(gtk_window_get_type_hint(gtk()), GDK_WINDOW_TYPE_HINT_NORMAL, GDK_WINDOW_TYPE_HINT_DIALOG, GDK_WINDOW_TYPE_HINT_UTILITY) >= 0)
 			tw->SyncSizeHints();
 
-	if(IsWayland() || IsPopUp()) {
+	if(IsWayland() || popup) {
 		gtk_window_set_default_size(gtk(), LSC(r.GetWidth()), LSC(r.GetHeight()));
 		gtk_window_move(gtk(), LSC(r.left), LSC(r.top));
 		gtk_window_resize(gtk(), LSC(r.GetWidth()), LSC(r.GetHeight()));

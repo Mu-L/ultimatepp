@@ -259,6 +259,9 @@ void TopicEditor::FileBar(Bar& bar)
 	bar.Add("Export group  to PDF..", THISBACK(ExportGroupPdf));
 	bar.Add("Export to HTML..", THISBACK(ExportHTML));
 	bar.Add("Export group to HTML..", THISBACK(ExportGroupHTML));
+	bar.Add("Export as GitHub Markdown..", [=] {
+		ExportMarkdown(editor.GetQTF(), GetFileTitle(topicpath));
+	});
 }
 
 void TopicEditor::EditMenu(Bar& bar)

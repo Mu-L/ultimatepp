@@ -30,9 +30,9 @@ void Ide::AddReferenceLine(const String& path, Point mpos, const String& name, I
 	int count = 0;
 	int pos = -1;
 	if(name.GetCount()) {
-		pos = FindId(ln.Mid(mpos.x), name);
+		pos = FindFirstId(ln.Mid(mpos.x), name);
 		if(pos < 0) {
-			pos = FindId(ln.Mid(mpos.x), "With" + name);
+			pos = FindFirstId(ln.Mid(mpos.x), "With" + name);
 			if(pos >= 0) // special case for WithNameLayout
 				pos += 4;
 		}

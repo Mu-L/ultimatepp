@@ -101,6 +101,9 @@ protected:
 	FrameBottom<EditString> input;
 	String line;
 	int    serial;
+	
+	String       text_buffer;
+	TimeCallback flush;
 
 	void CheckEndGroup();
 	void FlushConsole();
@@ -1188,7 +1191,7 @@ public:
 
 	Rect      GetFileInfoRect();
 	String    GetAssemblyInfoQtf();
-	Rect      GetAssemblyInfoRect();
+	Rect      GetAssemblyInfoRect(Size *tsz = nullptr);
 	void      PaintTitlebarInfo(Draw& w);
 
 	void      PassEditor(AssistEditor& editor2);

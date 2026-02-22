@@ -212,7 +212,7 @@ void AssistEditor::DCopy()
 			if(m.kind == CXCursor_VarDecl) {
 				if(cls.GetCount()) { // class variable
 					if(m.definition) {
-						int q = FindId(m.pretty, m.name);
+						int q = FindLastId(m.pretty, m.name);
 						if(q >= 0) {
 							int w = m.pretty.ReverseFind(' ', q);
 							if(w >= 0)
@@ -223,14 +223,14 @@ void AssistEditor::DCopy()
 						String h = m.pretty;
 						h.TrimStart("static ");
 						h = TrimLeft(h);
-						int q = FindId(h, m.name);
+						int q = FindLastId(h, m.name);
 						if(q >= 0)
 							result << h.Mid(0, q) << cls << h.Mid(q) << ";\n";
 					}
 				}
 				else { // just toggle extern
 					String h = m.pretty;
-					if(FindId(GetUtf8Line(m.pos.y), "extern") < 0)
+					if(FindLastId(GetUtf8Line(m.pos.y), "extern") < 0)
 						h = "extern " + h;
 					result << h << ";\n";
 				}

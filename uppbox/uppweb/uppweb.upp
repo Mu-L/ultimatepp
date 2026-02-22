@@ -11,7 +11,8 @@ uses
 	Sql,
 	Painter,
 	VirtualGui,
-	plugin/FT_fontsys;
+	plugin/FT_fontsys,
+	Core/SSH;
 
 options(GCC) -DNOWSTRING;
 
