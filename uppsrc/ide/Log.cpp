@@ -253,7 +253,7 @@ void Ide::FindDs(int where, bool all)
 							String line;
 							for(const char *s = pos.lineptr; findarg(*s, '\0', '\r', '\n') < 0; s++)
 								line.Cat(*s);
-							AddFoundFile(fn, pos.line, line, pos.ptr - pos.lineptr, id.GetCount());
+							AddFoundFile(fn, pos.line, line, (int)(pos.ptr - pos.lineptr), id.GetCount());
 						}
 					}
 					else

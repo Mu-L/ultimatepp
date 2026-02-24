@@ -147,7 +147,7 @@ void FlagsDlg::Reload()
 	for(int pass = 0; pass < 2; pass++) // second pass for "hidden" flags
 		for(const auto& f : ~code_flags) {
 			String packages = Join(f.value.b.GetKeys(), ", ");
-			if(IsNull(f.value.a) == pass && ToUpper(f.key + f.value.a + packages).Find(s) >= 0) {
+			if(IsNull(f.value.a) == !!pass && ToUpper(f.key + f.value.a + packages).Find(s) >= 0) {
 				accepts.Add(false, f.key, AttrText(f.value.a).Italic(pass), packages);
 				recognized_flags.FindAdd(f.key);
 			}
