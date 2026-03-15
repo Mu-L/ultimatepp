@@ -1,4 +1,4 @@
-description "Ultimate++ website generation and export. C++14/U++16 version\377";
+description "Ultimate++ website generation and export.\377";
 
 uses
 	RichText,
